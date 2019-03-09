@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" >
+    <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body style="background-color:#232323">
+
+
+<div class="container">
+
+<div class="row" style="height: 100vh;">
+
+    <div class="col-4 offset-4 align-self-center mainBox text-center">
+
+        <div class="row">
+            <div class="col logo"><img class="img-fluid float-left" src="assets/img/logo.png"></div>
+            <div class="col"><span id="prekidac" class="float-right" onclick="ocistiEkran()">&#xF011;</span></div>
+        </div>
+        <div class="row">
+            <div class="col text-right" id="ekran">123456</div>
+        </div>
+
+       <div class="row">
+            <div class="col dugme"  onclick="upisiBroj(7)">7</div>
+            <div class="col dugme"  onclick="upisiBroj(8)">8</div>
+            <div class="col dugme"  onclick="upisiBroj(9)">9</div>
+            <div class="col dugme"  onclick="postaviOperaciju('/')">/</div>
+        </div>
+
+        <div class="row">
+            <div class="col dugme"   onclick="upisiBroj('4')">4</div>
+            <div class="col dugme"   onclick="upisiBroj('5')">5</div>
+            <div class="col dugme"   onclick="upisiBroj('6')">6</div>
+            <div class="col dugme"  onclick="postaviOperaciju('*')">x</div>
+        </div>
+
+        <div class="row">
+            <div class="col dugme" id="jedan"  onclick="upisiBrojElementId('jedan')">1</div>
+            <div class="col dugme" id="dva"  onclick="upisiBrojElementId('dva')">2</div>
+            <div class="col dugme" id="tri"  onclick="upisiBrojElementId('tri')">3</div>
+            <div class="col dugme"  onclick="postaviOperaciju('-')">-</div>
+        </div>
+
+        <div class="row">
+            <div class="col dugme" id="nula" onclick="dodajNulu()">0</div>
+            <div class="col dugme" id="tacka" onclick="dodajTacku()">.</div>
+            <div class="col dugme" id="clear" onclick="ocistiEkran()">C</div>
+            <div class="col dugme"  onclick="postaviOperaciju('+')">+</div>
+        </div>
+
+        <div class="row">
+            <div class="col dugme" id="jednako" onclick="izracunaj()">=</div>
+        </div>
+    </div>
+
+</div>
+
+</div>
+    
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" ></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" ></script>    
+    <script type="text/javascript" src="assets/js/script.js" ></script>
+    <script type="text/javascript">
+		$(document).ready(function(){
+			$('#prekidac').on('click', function(){
+				$(this).toggleClass('on');
+                $('#ekran').toggleClass('on');
+			});
+		});
+	</script>
+</body>
+</html>
